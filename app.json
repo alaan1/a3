@@ -2,7 +2,7 @@
     "name": "Telethon DRAGON Music Bot",
     "description": "تسمح لك الموسيقى بدفق الموسيقى التي توفرها ميزة الدردشة الصوتية في Telegram استنادًا إلى Telethon.",
     "keywords": ["DRAGON", "DRAGON-MUSIC", "music", "voice chat", "telegram", "Yukki", "Yukki Music", "Private Music", "telethon"],
-    "repository": "https://github.com/taher-1/DRAGON-MUSIC",
+    "repository": "https://t.me/DRACULA_2023",
   "stack": "container",
     "env": {
         "STRING_SESSION": {

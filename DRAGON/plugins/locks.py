@@ -15,7 +15,7 @@ LOCKS_HELP = """
 لعرض الصلاحيات التي يمكنك قفلها
 """
 
-@DRAGON.on(events.NewMessage(pattern="^[!?/]قفل ?(.*)"))
+@DRAGON.on(events.NewMessage(pattern="قفل"))
 @is_admin
 async def lock(event, perm):
     if not perm.change_info:
@@ -65,7 +65,7 @@ async def lock(event, perm):
        await event.reply("- تم قفل الكل")
 
 
-@DRAGON.on(events.NewMessage(pattern="^[!?/]فتح ?(.*)"))
+@DRAGON.on(events.NewMessage(pattern="فتح"))
 @is_admin
 async def unlock(event, perm):
     if not perm.change_info:
@@ -115,7 +115,7 @@ async def unlock(event, perm):
        await event.reply("تم فتح الكل")
 
 
-@DRAGON.on(events.NewMessage(pattern="^[!?/]الصلاحيات"))
+@DRAGON.on(events.NewMessage(pattern="الصلاحيات"))
 async def locktypes(event):
     TEXT = """
 **Locks:**

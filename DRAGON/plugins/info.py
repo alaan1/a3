@@ -17,7 +17,7 @@ MISC_HELP = """
 لعرض معلومات المستخدم بالرد عليه
 """
 
-@DRAGON.on(events.NewMessage(pattern="^[!?/]الايدي"))
+@DRAGON.on(events.NewMessage(pattern="الايدي"))
 async def id(event):
 
     if event.is_private:
@@ -36,7 +36,7 @@ async def id(event):
 
     await event.reply(f"المستخدم {msg.sender.first_name} /n الايدي `{msg.sender_id}`.")
  
-@DRAGON.on(events.NewMessage(pattern="^[!?/]ايدي ?(.*)"))
+@DRAGON.on(events.NewMessage(pattern="ايدي"))
 async def info(event):
 
     sed = await DRAGON(P(user_id=event.sender_id, offset=42, max_id=0, limit=80))

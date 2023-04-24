@@ -19,7 +19,5 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
     
 print("تم تنصيب السورس بنجاح")
-print("قناة السورس @Dragon_2022_D")
-print("[للتنصيب ](https://t.me/DRACULA_2023/670)")
 if __name__ == "__main__":
     DRAGON.run_until_disconnected()

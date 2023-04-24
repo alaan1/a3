@@ -47,7 +47,7 @@ async def promote(event, perm):
 
     await event.reply(f"تم بنجاح رفع المستخدم {input_str} in {event.chat.title}")
  
-@DRAGON.on(events.NewMessage(pattern="تنزيل))
+@DRAGON.on(events.NewMessage(pattern="تنزيل"))
 @is_admin
 async def promote(event, perm):
     if event.is_private:

@@ -41,7 +41,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 )
 
 
-@DRAGON.on(events.NewMessage(pattern="^[!?/]المحذوفين ?(.*)"))
+@DRAGON.on(events.NewMessage(pattern="المحذوفين"))
 @is_admin
 async def clean(event, perm):
     if not perm.ban_users:

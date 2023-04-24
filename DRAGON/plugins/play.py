@@ -130,7 +130,7 @@ btnn =[
 
 
 #play
-@DRAGON.on(events.NewMessage(pattern="^[?!/]تشغيل"))
+@DRAGON.on(events.NewMessage(pattern="تشغيل"))
 async def play(event):
     title = ' '.join(event.text[5:])
     replied = await event.get_reply_message()
@@ -227,7 +227,7 @@ async def play(event):
 
 
 #end
-@DRAGON.on(events.NewMessage(pattern="^[/?!]انهاء"))
+@DRAGON.on(events.NewMessage(pattern="انهاء"))
 @is_admin
 async def vc_end(event, perm):
     chat_id = event.chat_id
@@ -245,10 +245,10 @@ async def vc_end(event, perm):
 
 
 
-@DRAGON.on(events.NewMessage(pattern="^[?!/]فيديو"))
+@DRAGON.on(events.NewMessage(pattern="فيديو"))
 async def vplay(event):
     if Config.HEROKU_MODE == "ENABLE":
-        await event.reply("- لا يمكنك استخدام هذا الامر لانك تستخدم هيروكو في التنصيب")
+        await event.reply("لا يمكنك استخدام هذا الامر")
         return
     title = ' '.join(event.text[6:])
     replied = await event.get_reply_message()
@@ -408,7 +408,7 @@ async def vplay(event):
 
 
 #playlist
-@DRAGON.on(events.NewMessage(pattern="^[?!/]التشغيل"))
+@DRAGON.on(events.NewMessage(pattern="التشغيل"))
 @is_admin
 async def vc_playlist(event, perm):
     chat_id = event.chat_id
@@ -438,7 +438,7 @@ async def vc_playlist(event, perm):
 
 
 #كود المغادرة
-@DRAGON.on(events.NewMessage(pattern="^[?!/]مغادرة"))
+@DRAGON.on(events.NewMessage(pattern="مغادرة"))
 @is_admin
 async def leavevc(event, perm):
     razan = await event.reply("- يرجى الانتظار قليلا")
@@ -455,7 +455,7 @@ async def leavevc(event, perm):
 
 
 
-@DRAGON.on(events.NewMessage(pattern="^[?!/]تخطي"))
+@DRAGON.on(events.NewMessage(pattern="تخطي"))
 @is_admin
 async def vc_skip(event, perm):
     chat_id = event.chat_id
@@ -484,7 +484,7 @@ async def vc_skip(event, perm):
             await event.reply(DELQUE)
 
 
-@DRAGON.on(events.NewMessage(pattern="^[?!/]ايقاف"))
+@DRAGON.on(events.NewMessage(pattern="ايقاف"))
 @is_admin
 async def vc_pause(event, perm):
     chat_id = event.chat_id
@@ -499,7 +499,7 @@ async def vc_pause(event, perm):
 
 
 
-@DRAGON.on(events.NewMessage(pattern="^[?!/]استئناف"))
+@DRAGON.on(events.NewMessage(pattern="استئناف"))
 @is_admin
 async def vc_resume(event, perm):
     chat_id = event.chat_id

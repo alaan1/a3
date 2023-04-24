@@ -10,7 +10,7 @@ IMG = os.environ.get(
 ms = 4
 
 ALIVE = os.environ.get(
-    "ALIVE", "@DRACULA_2023"
+    "ALIVE", "@FoR4lEx"
 )
 
 CAPTION = f"**سرعة البنك:** {ms}\n المالك:『{ALIVE}』"
@@ -18,5 +18,5 @@ CAPTION = f"**سرعة البنك:** {ms}\n المالك:『{ALIVE}』"
 
 @DRAGON.on(events.NewMessage(pattern="^/ping"))
 async def _(event):
-    UMM = [[Button.url("السورس", "https://t.me/DRACULA_2023/670")]]
+    UMM = [[Button.url("Channel", "https://t.me/FoR4lEx")]]
     await DRAGON.send_file(event.chat_id, IMG, caption=CAPTION, buttons=UMM)
